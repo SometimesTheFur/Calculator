@@ -1,0 +1,14 @@
+html, body {
+    /*background-image: linear-gradient(rgba(91, 112, 131), rgb(255, 254, 240, 0));*/
+    color: rgb(36, 36, 36);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#container {
+    background-color: rgba(95, 158, 160, 0.226);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+.screen {
+
+}
