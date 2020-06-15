@@ -4,7 +4,7 @@ html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #container {
-    background-color: rgba(95, 158, 160, 0.226);
+    /*background-color: rgba(95, 158, 160, 0.226);*/
     display: grid;
     grid-gap: 3px;
     grid-template-columns: repeat(4, 1fr);
@@ -12,6 +12,7 @@ html, body {
     width: 300px;
     height: 500px;
     justify-content: center;
+    padding-bottom: 200px;
 }
 #screen {
     background-color: rgba(128, 255, 0, 0.795);
@@ -20,6 +21,8 @@ html, body {
     color: rgb(39, 65, 65);
     font-size: 2em;
     min-height: auto;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(78, 78, 78, 0.438);
 }
 button {
     min-width: 40px;
@@ -27,4 +30,7 @@ button {
     border-radius: 5px;
     font-size: 2em;
     color: rgb(49, 59, 59);
+    font-family: bolder monospace;
+    box-shadow: 2px 2px 5px rgba(78, 78, 78, 0.438);
+    background: rgb(227, 227, 241);
 }
