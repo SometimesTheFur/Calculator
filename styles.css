@@ -1,14 +1,30 @@
 html, body {
-    /*background-image: linear-gradient(rgba(91, 112, 131), rgb(255, 254, 240, 0));*/
+    background-image: linear-gradient(rgba(91, 112, 131), rgb(255, 254, 240, 0));
     color: rgb(36, 36, 36);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #container {
     background-color: rgba(95, 158, 160, 0.226);
     display: grid;
+    grid-gap: 3px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
+    width: 300px;
+    height: 500px;
+    justify-content: center;
 }
-.screen {
-
+#screen {
+    background-color: rgba(128, 255, 0, 0.795);
+    grid-row: 1;
+    grid-column: 1/5;
+    color: rgb(39, 65, 65);
+    font-size: 2em;
+    min-height: auto;
+}
+button {
+    min-width: 40px;
+    min-height: 80px;
+    border-radius: 5px;
+    font-size: 2em;
+    color: rgb(49, 59, 59);
 }
