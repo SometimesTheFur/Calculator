@@ -1,10 +1,10 @@
 //Number Button Variables
 const one = document.getElementById("one");
-one.addEventListener("click", () => screen.innerHTML += "1");
+one.addEventListener("click", () => screen.innerHTML += 1);
 const two = document.getElementById("two");
-two.addEventListener("click", () => screen.innerHTML += "2");
+two.addEventListener("click", () => screen.innerHTML += 2);
 const three = document.getElementById("three");
-three.addEventListener("click", () => screen.innerHTML += "3");
+three.addEventListener("click", () => screen.innerHTML += 3);
 const four = document.getElementById("four");
 four.addEventListener("click", () => screen.innerHTML += 4);
 const five = document.getElementById("five");
@@ -27,4 +27,4 @@ const clear = document.getElementById("clr");
 clear.addEventListener("click", () => screen.innerHTML = "");
 
 const back = document.getElementById("back");
-two.addEventListener("click", () => screen.innerHTML.pop());
+two.addEventListener("click", () => screen.pop());
