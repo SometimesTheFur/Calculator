@@ -21,7 +21,7 @@ footer {
     padding-top: 20px;
 }
 #screen {
-    background-color: rgba(128, 255, 0, 0.795);
+    background-color: rgba(128, 255, 0, 0.651);
     grid-row: 1;
     grid-column: 1/5;
     color: rgb(39, 65, 65);
@@ -46,6 +46,6 @@ button:hover {
 }
 button:active {
     box-shadow: 0 #666;
-    transform: translateY(2px);
+    transform: translateY(3px);
     outline: none !important;
 }
