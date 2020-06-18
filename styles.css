@@ -6,8 +6,13 @@ body {
     justify-content: center;
 }
 footer {
+    align-items: baseline;
     justify-self: center;
     font-size: 14px;
+    display: inline;
+}
+.name {
+   font-variant-position: super;
 }
 #container {
     background: none;
