@@ -1,3 +1,5 @@
+const screen = document.getElementById("screen");
+
 //Number Button Variables
 const one = document.getElementById("one");
 one.addEventListener("click", () => screen.innerHTML += 1);
@@ -20,11 +22,20 @@ nine.addEventListener("click", () => screen.innerHTML += 9);
 const zero = document.getElementById("zero");
 zero.addEventListener("click", () => screen.innerHTML += 0);
 
-const screen = document.getElementById("screen");
 
 //Function Button Variables
 const clear = document.getElementById("clr");
 clear.addEventListener("click", () => screen.innerHTML = "");
+const percent = document.getElementById("percent");
+percent.addEventListener("click", () => screen.innerHTML += "%");
+const divide = document.getElementById("div");
+divide.addEventListener("click", () => screen.innerHTML += "÷");
+const multiply = document.getElementById("multiply");
+multiply.addEventListener("click", () => screen.innerHTML += "x");
+const subtract = document.getElementById("subtract");
+subtract.addEventListener("click", () => screen.innerHTML += "-");
+const add = document.getElementById("add");
+add.addEventListener("click", () => screen.innerHTML += "+");
 
 const back = document.getElementById("back");
 two.addEventListener("click", () => screen.pop());
