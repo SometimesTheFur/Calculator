@@ -72,6 +72,8 @@ class Calculator {
         this.currentMathTextElement.innerText = this.getDisplayNumber(this.currentMath)
         if(this.operation != null) {
             this.previousMathTextElement.innerText = `${this.getDisplayNumber(this.previousMath)} ${this.operation}`
+        } else {
+            this.previousMathTextElement.innerText = ''
         }
     }
 }
@@ -110,8 +112,9 @@ deleteBtn.addEventListener("click", () => {
     calculator.delete()
     calculator.updateDisplay()
 })
-// const screen = document.getElementById("screen");
+
 //Button Variables v1
+// const screen = document.getElementById("screen");
 // const one = document.getElementById("one");
 // one.addEventListener("click", () => screen.innerHTML += 1);
 // const two = document.getElementById("two");
