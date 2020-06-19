@@ -1,7 +1,7 @@
 class Calculator {
-    constructor(previousMath, currentMath) {
-        this.previousMath = currentMath
-        this.currentMath = previousMath
+    constructor(previousMathTextElement, currentMathTextElement) {
+        this.previousMathTextElement = previousMathTextElement
+        this.currentMathTextElement = currentMathTextElement
         this.clear()
     }
     clear() {
@@ -10,19 +10,56 @@ class Calculator {
         this.operation = undefined
     }
     delete() {
-
+        this.currentMath = this.currentMath.toString().slice(0, -1)
     }
     appendNumber(number) {
-        this.currentMath = number
+        if(number === '.' && this.currentMath.includes('.')) return;
+        this.currentMath = this.currentMath.toString() + number.toString();
     }
     chooseOperation(operation) {
-
+        if(this.currentMath === '') return
+        if(this.previousMath !== '') {
+            this.compute()
+        }
+        this.operation = operation
+        this.previousMath = this.currentMath
+        this.currentMath = ''
     }
     compute() {
-
+        let computation
+        const prev = parseFloat(this.previousMath)
+        const current = parseFloat(this.currentMath)
+        if(isNaN(prev) || isNaN(current)) return;
+        switch (this.operation) {
+            case '+':
+                computation = prev + current
+                break;
+            case '−':
+                computation = prev - current
+                break;
+            case '×':
+                computation = prev * current
+                break;
+            case '÷':
+                computation = prev / current
+                break;
+            default:
+                break;
+        }
+        this.currentMath = computation
+        this.operation = undefined
+        this.previousMath = ''
+    }
+    getDisplayNumber(number) {
+        const floatNumber = parseFloat(number)
+        if(isNaN(floatNumber)) return ''
+        return floatNumber.toLocaleString('en')
     }
     updateDisplay() {
-        this.currentMathTextElement.innerText = this.currentMath
+        this.currentMathTextElement.innerText = this.getDisplayNumber(this.currentMath)
+        if(this.operation != null) {
+            this.previousMathTextElement.innerText = `${this.getDisplayNumber(this.previousMath)} ${this.operation}`
+        }
     }
 }
 
@@ -41,9 +78,25 @@ numberBtns.forEach(button => {
         calculator.appendNumber(button.innerText)
         calculator.updateDisplay()
     })
-    
 })
-
+operationBtns.forEach(button => {
+    button.addEventListener("click", () => {
+        calculator.chooseOperation(button.innerText)
+        calculator.updateDisplay()
+    })
+})
+equalsBtn.addEventListener("click", () => {
+    calculator.compute()
+    calculator.updateDisplay()
+})
+clearBtn.addEventListener("click", () => {
+    calculator.clear()
+    calculator.updateDisplay()
+})
+deleteBtn.addEventListener("click", () => {
+    calculator.delete()
+    calculator.updateDisplay()
+})
 // const screen = document.getElementById("screen");
 //Button Variables v1
 // const one = document.getElementById("one");
