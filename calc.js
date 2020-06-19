@@ -31,9 +31,9 @@ percent.addEventListener("click", () => screen.innerHTML += "%");
 const divide = document.getElementById("div");
 divide.addEventListener("click", () => screen.innerHTML += "÷");
 const multiply = document.getElementById("multiply");
-multiply.addEventListener("click", () => screen.innerHTML += "x");
+multiply.addEventListener("click", () => screen.innerHTML += "×");
 const subtract = document.getElementById("subtract");
-subtract.addEventListener("click", () => screen.innerHTML += "-");
+subtract.addEventListener("click", () => screen.innerHTML += "−");
 const add = document.getElementById("add");
 add.addEventListener("click", () => screen.innerHTML += "+");
 

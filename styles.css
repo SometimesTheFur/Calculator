@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(rgba(91, 112, 131), rgb(255, 254, 240, 0));
+    background-image: linear-gradient(to right, rgba(91, 112, 131), rgb(255, 254, 240, 0));
     color: rgb(36, 36, 36);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: grid;
@@ -18,12 +18,12 @@ footer {
     background: none;
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
     min-width: 350px;
     min-height: 500px;
     padding-bottom: 100px;
-    padding-top: 20px;
+    padding-top: 3px;
 }
 #screen {
     background-color: rgba(128, 255, 0, 0.651);
@@ -34,17 +34,25 @@ footer {
     min-height: auto;
     border-radius: 3px;
     box-shadow: 2px 2px 5px rgba(78, 78, 78, 0.438);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 button {
     min-width: 40px;
     min-height: 80px;
     border-radius: 5px;
-    font-size: 2em;
+    font-size: 2rem;
     color: rgb(49, 59, 59);
     font-family: bolder monospace;
     box-shadow: 2px 2px 5px rgba(78, 78, 78, 0.438);
     background: rgb(227, 227, 241);
     border: none;
+    outline: none;
 }
 button:hover {
     cursor: pointer;
@@ -53,4 +61,10 @@ button:active {
     box-shadow: 0 #666;
     transform: translateY(3px);
     outline: none !important;
+}
+.previous-math {
+     font-size: 1.5rem;
+}
+.current-math {
+    font-size: 2.5rem;
 }
